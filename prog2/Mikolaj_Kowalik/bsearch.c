@@ -28,7 +28,7 @@ void fill(int *arr, int n) {
 
 void heapify(int *dst, int *src, int n) {
   for(int i=n+1, first=n>>1, r=1, a=0;   i>0;   i>>=1, first>>=1, r<<=1)
-		for(int k=0, h=first;   k<r;    ++k, h+=i) 
+		for(int k=0, h=first;   k<r && h<n && a<n;    ++k, h+=i) 
 			dst[a++] = src[h];
 }
 
